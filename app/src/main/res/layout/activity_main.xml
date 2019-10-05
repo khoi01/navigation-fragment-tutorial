@@ -21,12 +21,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-                <!-- add fragment(fragment_title) here -->
+                <!-- set below fragment as nav host fragment -->
+                <!--NOTE: This will me the main nav host fragment-->
+                <!-- defaultNavHost: we want only this/current navhost will only handle the nav back-->
                 <fragment
-                        android:id="@+id/titleFragment"
-                        android:name="com.example.android.navigation.TitleFragment"
+                    android:id="@+id/myNavHostFragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    app:defaultNavHost="true"
+                    app:navGraph="@navigation/navigation">
                 </fragment>
         </LinearLayout>
 
