@@ -21,10 +21,16 @@
         tools:layout="@layout/fragment_game" >
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment2"
-            app:destination="@id/gameOverFragment2" />
+            app:destination="@id/gameOverFragment2"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+        <!-- popUpto && popUpToInclusize (pop behaviour) remove the previous backstack,that mean when we click back btn  it will go back to title fragment (not gamefragment) -->
         <action
             android:id="@+id/action_gameFragment_to_gameWonFragment"
-            app:destination="@id/gameWonFragment" />
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+        <!-- popUpto && popUpToInclusize (pop behaviour) remove the previous backstack,that mean when we click back btn  it will go back to title fragment (not gamefragment) -->
     </fragment>
     <fragment
         android:id="@+id/gameOverFragment2"
